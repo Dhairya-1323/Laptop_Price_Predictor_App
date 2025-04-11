@@ -29,8 +29,8 @@ screen_resolution=st.selectbox("Screen Resolution(in horizontal x vertical pixel
                                 "3200x1800","1920x1200","2256x1504","3840x2160","2160x1440","2560x1440",
                                 "1600x900","2736x1824","2400x1600"])
 if st.button("PREDICT PRICE"):
-  X_res=int(screen_resolution.split(x)[0])
-  Y_res=int(screen_resolution.split(x)[1])
+  X_res=int(screen_resolution.split('x')[0])
+  Y_res=int(screen_resolution.split('x')[1])
   ppi=((X_res**2)+(Y_res**2))**0.5/screen_size
   if ips=='Yes':
     ips=1
